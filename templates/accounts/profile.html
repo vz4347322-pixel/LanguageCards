@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="UTF-8"><title>Профиль</title></head>
+<body>
+    <h2>Личный кабинет</h2>
+    <p>Привет, <b>{{ request.user.username }}</b>! Твоя роль: {{ request.user.role }}</p>
+    <a href="{% url 'logout' %}">Выйти</a>
+</body>
+</html>

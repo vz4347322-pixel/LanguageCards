@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="UTF-8"><title>Регистрация</title></head>
+<body>
+    <h2>Регистрация</h2>
+    {% if messages %}
+        {% for message in messages %}<p style="color:red">{{ message }}</p>{% endfor %}
+    {% endif %}
+    <form method="post" id="register-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+</body>
+</html>
